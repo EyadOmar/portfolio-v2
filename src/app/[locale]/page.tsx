@@ -13,10 +13,10 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const t = await getTranslations('HomePage');
+  const t = await getTranslations({ locale, namespace: 'home' });
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 dark:bg-black">
+    <div className="flex flex-col container flex-1 items-center justify-center">
       <h1 className="text-5xl"> {t('title')}</h1>
     </div>
   );

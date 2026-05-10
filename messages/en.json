@@ -1,5 +1,46 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "metadata": {
+    "site": {
+      "name": "Eyad Omar Portfolio",
+      "creator": "Eyad Omar"
+    },
+    "home": {
+      "title": "Eyad Omar | Full-Stack Software Engineer",
+      "description": "Eyad Omar is a full-stack software engineer specializing in Next.js, React, TypeScript, NestJS, React Native, dashboards, e-commerce platforms, and multilingual web applications.",
+      "keywords": [
+        "Eyad Omar",
+        "Full-Stack Software Engineer",
+        "Full-Stack Developer",
+        "Next.js Developer",
+        "React Developer",
+        "TypeScript Developer",
+        "NestJS Developer",
+        "React Native Developer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Web Developer Egypt",
+        "Freelance Web Developer",
+        "Arabic English Websites",
+        "RTL Web Development",
+        "Dashboard Developer",
+        "E-commerce Developer"
+      ],
+      "ogAlt": "Eyad Omar - Full-Stack Software Engineer Portfolio"
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about Eyad Omar, a full-stack software engineer building modern, fast, multilingual web and mobile applications."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore selected projects by Eyad Omar, including e-commerce platforms, dashboards, real estate websites, educational platforms, and mobile applications."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Eyad Omar for full-stack web development, Next.js, React, NestJS, React Native, dashboards, e-commerce platforms, and multilingual websites."
+    }
+  },
+  "home": {
+    "title": "Eyad Omar | Full-Stack Software Engineer"
   }
 }
