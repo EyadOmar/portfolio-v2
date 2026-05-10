@@ -14,6 +14,7 @@ export default function proxy(request: NextRequest) {
   return intlMiddleware(request);
 }
 
+// Next.js config
 export const config = {
   matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
 };
