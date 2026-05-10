@@ -18,7 +18,7 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
-const siteUrl = 'https://portfolio.eyeado.com';
+const siteUrl = 'https://eyadomar.com';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -75,19 +75,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('home.description'),
       locale: isArabic ? 'ar_EG' : 'en_US',
       alternateLocale: isArabic ? ['en_US'] : ['ar_EG'],
-      images: [
-        {
-          url: `${siteUrl}/opengraph-image.jpg`,
-          alt: t('home.ogAlt'),
-        },
-      ],
     },
 
     twitter: {
       card: 'summary_large_image',
       title: t('home.title'),
       description: t('home.description'),
-      images: [`${siteUrl}/twitter-image.jpg`],
     },
 
     robots: {

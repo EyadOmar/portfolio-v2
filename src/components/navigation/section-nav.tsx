@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { motion, useReducedMotion } from 'framer-motion';
 
 export type SectionNavItem = {
   href: string;
@@ -14,6 +15,7 @@ type SectionNavProps = {
 
 export default function SectionNav({ items }: SectionNavProps) {
   const [activeHref, setActiveHref] = useState(items[0]?.href ?? '');
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (items.length === 0) {
@@ -68,10 +70,13 @@ export default function SectionNav({ items }: SectionNavProps) {
 
           return (
             <li key={item.href}>
-              <a
+              <motion.a
                 href={item.href}
                 aria-current={isActive ? 'location' : undefined}
                 onClick={() => setActiveHref(item.href)}
+                whileHover={shouldReduceMotion ? undefined : { x: 4 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.98 }}
+                transition={{ type: 'spring', stiffness: 420, damping: 32 }}
                 className={cn(
                   'group inline-flex items-center gap-3.5 transition-colors hover:text-foreground',
                   isActive && 'text-foreground',
@@ -86,7 +91,7 @@ export default function SectionNav({ items }: SectionNavProps) {
                 <span className="tabular-nums">{number}</span>
                 <span aria-hidden="true">-</span>
                 <span>{item.label}</span>
-              </a>
+              </motion.a>
             </li>
           );
         })}

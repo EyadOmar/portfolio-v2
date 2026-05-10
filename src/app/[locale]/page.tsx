@@ -102,7 +102,7 @@ export default async function Home({ params }: HomeProps) {
                     title={link.label}
                     target={link.external ? '_blank' : undefined}
                     rel={link.external ? 'noreferrer' : undefined}
-                    className="grid size-10 place-items-center border border-border text-muted-foreground transition-colors hover:border-emerald-500 hover:text-emerald-500"
+                    className="grid size-10 place-items-center border border-border text-muted-foreground transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500 hover:text-emerald-500 active:translate-y-0"
                   >
                     <Icon className="size-5" weight="bold" aria-hidden="true" />
                   </a>
@@ -124,7 +124,7 @@ export default async function Home({ params }: HomeProps) {
             {stats.map((stat) => (
               <div
                 key={`${stat.value}-${stat.label}`}
-                className="border border-border bg-card/70 p-4"
+                className="border border-border bg-card/70 p-4 transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500/60"
               >
                 <dt className="text-2xl font-semibold text-foreground">
                   {stat.value}
@@ -146,7 +146,7 @@ export default async function Home({ params }: HomeProps) {
               return (
                 <li
                   key={skill.id}
-                  className="flex min-h-16 items-center gap-3 border border-border bg-card/70 p-3"
+                  className="flex min-h-16 items-center gap-3 border border-border bg-card/70 p-3 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-500/60"
                 >
                   <span className="grid size-10 shrink-0 place-items-center bg-foreground">
                     <Icon className="size-5" aria-hidden="true" />
@@ -173,7 +173,7 @@ export default async function Home({ params }: HomeProps) {
               return (
                 <li
                   key={item.id}
-                  className="group grid gap-3 border border-border bg-card/60 p-4 transition-colors hover:border-emerald-500/60 sm:grid-cols-[9rem_1fr]"
+                  className="group grid gap-3 border border-border bg-card/60 p-4 transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500/60 sm:grid-cols-[9rem_1fr]"
                 >
                   <p className="text-xs leading-6 font-medium text-muted-foreground">
                     {period}
@@ -207,7 +207,7 @@ export default async function Home({ params }: HomeProps) {
               return (
                 <article
                   key={project.id}
-                  className="border border-border bg-card/60 p-5 transition-colors hover:border-cyan-500/60"
+                  className="border border-border bg-card/60 p-5 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-500/60"
                 >
                   <div className="flex items-start gap-4">
                     <span className="grid size-11 shrink-0 place-items-center border border-border bg-background text-sm font-semibold text-cyan-500">
