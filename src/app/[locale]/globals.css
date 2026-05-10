@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-mono);
   --font-mono: var(--font-mono);
   --font-heading: var(--font-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -127,8 +127,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply bg-background text-foreground font-mono;
+    @apply bg-background text-foreground font-mono selection:bg-emerald-500/20 selection:text-foreground;
   }
 }
 

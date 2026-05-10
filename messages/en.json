@@ -40,7 +40,40 @@
       "description": "Contact Eyad Omar for full-stack web development, Next.js, React, NestJS, React Native, dashboards, e-commerce platforms, and multilingual websites."
     }
   },
+  "navigation": {
+    "brand": "Eyad Omar",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "locale": "العربية"
+  },
   "home": {
-    "title": "Eyad Omar | Full-Stack Software Engineer"
+    "title": "Eyad Omar | Full-Stack Software Engineer",
+    "eyebrow": "Full-Stack Software Engineer",
+    "headline": "Eyad Omar",
+    "intro": "I specialize in Next.js, React, TypeScript, NestJS, React Native, dashboards, e-commerce platforms, and Arabic-English product experiences.",
+    "aboutTitle": "About",
+    "aboutBody": "I focus on the practical overlap between clean engineering and product polish: fast interfaces, reliable data flows, maintainable backend services, and localization that works in both LTR and RTL contexts.",
+    "skillsTitle": "Technical stack",
+    "experienceTitle": "Experience",
+    "projectsTitle": "Selected projects",
+    "contactTitle": "Contact",
+    "contactBody": "For a dashboard, e-commerce platform, bilingual website, or mobile app, send a short note with the product goal and timeline.",
+    "contactCta": "Start a conversation",
+    "stats": [
+      {
+        "value": "3+",
+        "label": "selected product builds"
+      },
+      {
+        "value": "2",
+        "label": "production languages"
+      },
+      {
+        "value": "12",
+        "label": "core technologies"
+      }
+    ]
   }
 }

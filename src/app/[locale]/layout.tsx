@@ -75,13 +75,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t('home.description'),
       locale: isArabic ? 'ar_EG' : 'en_US',
       alternateLocale: isArabic ? ['en_US'] : ['ar_EG'],
+      images: [
+        {
+          url: `${siteUrl}/opengraph-image.jpg`,
+          alt: t('home.ogAlt'),
+        },
+      ],
     },
 
     twitter: {
       card: 'summary_large_image',
       title: t('home.title'),
       description: t('home.description'),
-      images: ['/og-image.png'],
+      images: [`${siteUrl}/twitter-image.jpg`],
     },
 
     robots: {
@@ -110,6 +116,7 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
       className={`${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -120,7 +127,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <MainHeader />
+          <MainHeader locale={locale} />
           {children}
         </ThemeProvider>
       </body>
