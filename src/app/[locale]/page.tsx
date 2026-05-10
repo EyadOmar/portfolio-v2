@@ -16,8 +16,8 @@ export default async function Home({
   const t = await getTranslations('HomePage');
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {t('title')}
+    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 dark:bg-black">
+      <h1 className="text-5xl"> {t('title')}</h1>
     </div>
   );
 }
