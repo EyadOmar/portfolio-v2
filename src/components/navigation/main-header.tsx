@@ -42,7 +42,7 @@ export default async function MainHeader({ locale }: MainHeaderProps) {
           ))}
           <a
             href={`/${otherLocale}`}
-            className="border border-border px-2.5 py-1.5 text-foreground transition-colors hover:border-emerald-500 hover:text-emerald-500"
+            className="border border-border h-8 flex items-center justify-center px-2.5 py-1.5 text-foreground transition-colors hover:border-emerald-500 hover:text-emerald-500"
           >
             {t('locale')}
           </a>
