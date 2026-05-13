@@ -21,22 +21,24 @@ type Stat = {
   label: string;
 };
 
+const WHATSAPP_LINK = 'https://wa.me/201002379226';
+
 const SOCIAL_LINKS = [
   {
     label: 'GitHub',
-    href: 'https://github.com/eiado',
+    href: 'https://github.com/EyadOmar',
     icon: GithubLogo,
     external: true,
   },
   {
     label: 'Email',
-    href: 'mailto:hello@eyeado.com',
+    href: 'mailto:eiad.omar88@gmail.com',
     icon: EnvelopeSimple,
     external: false,
   },
   {
     label: 'WhatsApp',
-    href: 'https://wa.me/?text=Hi%20Eyad%2C%20I%20saw%20your%20portfolio.',
+    href: WHATSAPP_LINK,
     icon: WhatsappLogo,
     external: true,
   },
@@ -235,7 +237,9 @@ export default async function Home({ params }: HomeProps) {
             {t('contactBody')}
           </p>
           <a
-            href="mailto:hello@eyeado.com"
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noreferrer"
             className="mt-8 inline-flex h-10 items-center gap-2 border border-primary bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             {t('contactCta')}
