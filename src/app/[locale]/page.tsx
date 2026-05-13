@@ -164,33 +164,63 @@ export default async function Home({ params }: HomeProps) {
 
         <section id="experience" className="scroll-mt-24">
           <SectionHeading title={t('experienceTitle')} />
-          <ol className="space-y-5">
-            {EXPERIENCE.map((item) => {
+          <ol className="relative border-border border-s ps-7 sm:ps-10">
+            {EXPERIENCE.map((item, index) => {
               const skillNames = getSkillNames(item.skills, skillById);
               const role = isArabic ? item.roleAr : item.roleEn;
               const company = isArabic ? item.companyAr : item.companyEn;
               const period = isArabic ? item.periodAr : item.periodEn;
               const summary = isArabic ? item.summaryAr : item.summaryEn;
+              const isLast = index === EXPERIENCE.length - 1;
 
               return (
                 <li
                   key={item.id}
-                  className="group grid gap-3 border border-border bg-card/60 p-4 transition-all duration-200 hover:-translate-y-1 hover:border-emerald-500/60 sm:grid-cols-[9rem_1fr]"
+                  className={`group relative ${isLast ? '' : 'pb-12 sm:pb-14'}`}
                 >
-                  <p className="text-xs leading-6 font-medium text-muted-foreground">
-                    {period}
-                  </p>
-                  <div>
-                    <h3 className="text-base font-semibold text-foreground">
-                      {role}
-                      <span className="text-muted-foreground"> - </span>
-                      <span className="text-emerald-500">{company}</span>
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                      {summary}
-                    </p>
-                    <TagList items={skillNames} />
+                  <span
+                    aria-hidden="true"
+                    className={`absolute top-[0.55rem] -start-[2.0625rem] sm:-start-[2.8125rem] size-2.5 rotate-45 border transition-colors duration-200 ${
+                      item.current
+                        ? 'border-emerald-500 bg-emerald-500'
+                        : 'border-border bg-background group-hover:border-emerald-500'
+                    }`}
+                  />
+
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                    <span className="text-[0.6875rem] font-medium tracking-[0.2em] text-muted-foreground/70">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="h-px w-4 bg-border"
+                    />
+                    <span className="text-[0.6875rem] tracking-[0.18em] text-muted-foreground uppercase">
+                      {period}
+                    </span>
+                    {item.current ? (
+                      <span className="inline-flex items-center gap-1.5 border border-emerald-500/40 bg-emerald-500/10 px-1.5 py-0.5 text-[0.625rem] font-medium tracking-[0.2em] text-emerald-600 uppercase dark:text-emerald-300">
+                        <span
+                          aria-hidden="true"
+                          className="size-1.5 animate-pulse rounded-full bg-emerald-500"
+                        />
+                        {isArabic ? 'الآن' : 'Now'}
+                      </span>
+                    ) : null}
                   </div>
+
+                  <h3 className="mt-3 text-lg leading-tight font-semibold text-foreground sm:text-xl">
+                    {role}
+                  </h3>
+                  <p className="mt-1 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    {company}
+                  </p>
+
+                  <p className="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">
+                    {summary}
+                  </p>
+
+                  <TagList items={skillNames} />
                 </li>
               );
             })}
