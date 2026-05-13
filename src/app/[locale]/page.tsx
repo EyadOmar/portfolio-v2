@@ -74,7 +74,7 @@ export default async function Home({ params }: HomeProps) {
   ];
 
   return (
-    <main className="mx-auto grid w-full max-w-6xl gap-16 px-5 pt-28 pb-20 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:pt-32 lg:pb-28">
+    <main className="mx-auto grid w-full max-w-6xl gap-12 px-5 pt-24 pb-16 sm:gap-16 sm:px-8 sm:pt-28 sm:pb-20 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:pt-32 lg:pb-28">
       <aside className="lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
         <div>
           <p className="mb-5 text-sm font-medium text-emerald-500">
@@ -115,7 +115,7 @@ export default async function Home({ params }: HomeProps) {
         </footer>
       </aside>
 
-      <div className="space-y-24">
+      <div className="space-y-20 sm:space-y-24">
         <section id="about" className="scroll-mt-24">
           <SectionHeading title={t('aboutTitle')} />
           <p className="max-w-2xl text-base leading-8 text-muted-foreground">
@@ -150,7 +150,10 @@ export default async function Home({ params }: HomeProps) {
                   key={skill.id}
                   className="flex min-h-16 items-center gap-3 border border-border bg-card/70 p-3 transition-all duration-200 hover:-translate-y-1 hover:border-cyan-500/60"
                 >
-                  <span className="grid size-10 shrink-0 place-items-center bg-foreground">
+                  <span
+                    style={{ backgroundColor: skill.accent }}
+                    className="grid size-10 shrink-0 place-items-center ring-1 ring-inset ring-black/5 dark:ring-white/10"
+                  >
                     <Icon className="size-5" aria-hidden="true" />
                   </span>
                   <span className="text-sm font-medium text-foreground">
