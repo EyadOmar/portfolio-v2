@@ -76,5 +76,64 @@
         "label": "تقنية أساسية"
       }
     ]
+  },
+  "contactForm": {
+    "open": "افتح نموذج التواصل",
+    "close": "إغلاق",
+    "title": "initialize.contact",
+    "subtitle": "اكتب نبذة قصيرة — أرد على واتساب خلال يوم",
+    "headline": "خلّينا نبني حاجة حقيقية.",
+    "escapeHint": "اضغط esc للإغلاق",
+    "fields": {
+      "name": {
+        "step": "01",
+        "label": "مين أنت؟",
+        "placeholder": "اسمك بالكامل"
+      },
+      "contact": {
+        "step": "02",
+        "label": "كيف أتواصل معك؟",
+        "placeholder": "بريد إلكتروني أو رقم هاتف",
+        "hintEmail": "تم اكتشاف بريد",
+        "hintPhone": "تم اكتشاف رقم",
+        "hintIdle": "أي منهما يعمل"
+      },
+      "services": {
+        "step": "03",
+        "label": "إيه اللي محتاجه؟",
+        "hint": "اختر واحد أو أكثر"
+      }
+    },
+    "services": {
+      "fullProject": {
+        "label": "مشروع كامل",
+        "description": "تصميم + Frontend + Backend من البداية للنهاية"
+      },
+      "frontend": {
+        "label": "الواجهة الأمامية",
+        "description": "Next.js و React وأنظمة تصميم ودعم RTL"
+      },
+      "backend": {
+        "label": "الواجهة الخلفية",
+        "description": "NestJS، PostgreSQL، APIs، ولوحات تحكم"
+      },
+      "hire": {
+        "label": "للتوظيف",
+        "description": "دوام كامل أو عقد طويل"
+      }
+    },
+    "submit": "إرسال على واتساب",
+    "sending": "جاري فتح واتساب",
+    "errors": {
+      "name": "قولّي أناديك بإيه.",
+      "contact": "اكتب بريد أو رقم هاتف أقدر أوصلك عليه.",
+      "services": "اختر نطاق واحد على الأقل."
+    },
+    "message": {
+      "header": "أهلاً إياد — تواصل جديد من eyadomar.com",
+      "name": "الاسم",
+      "contact": "التواصل",
+      "services": "النطاق المطلوب"
+    }
   }
 }

@@ -4,7 +4,16 @@
       "Bash(npx tsc *)",
       "Bash(npx eslint *)",
       "mcp__context7__resolve-library-id",
-      "Bash(pnpm dev *)"
+      "Bash(pnpm dev *)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/en.json','utf8'\\)\\); JSON.parse\\(require\\('fs'\\).readFileSync\\('messages/ar.json','utf8'\\)\\); console.log\\('JSON OK'\\);\")",
+      "Bash(npx next *)",
+      "Bash(grep -q \"Ready in\\\\|error\\\\|Error\" \"C:\\\\\\\\Users\\\\\\\\eiado\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\claude\\\\\\\\E--projects-portfolio-v2\\\\\\\\c4562e49-78ab-4248-a429-8a54164500f7\\\\\\\\tasks\\\\\\\\beuute3a7.output\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:3210/en\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"http://localhost:3210/ar\")",
+      "Bash(curl -s \"http://localhost:3210/en\")",
+      "Bash(curl -s \"http://localhost:3210/ar\")",
+      "Bash(xargs grep -l \"raw\")",
+      "PowerShell(Get-ChildItem -Path \"E:\\\\projects\\\\portfolio-v2\\\\node_modules\" -Directory | Where-Object { $_.Name -match \"intl\" } | Select-Object -ExpandProperty Name)"
     ]
   }
 }

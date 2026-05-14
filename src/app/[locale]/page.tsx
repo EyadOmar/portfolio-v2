@@ -5,6 +5,9 @@ import { routing } from '@/i18n/routing';
 import SectionNav, {
   type SectionNavItem,
 } from '@/components/navigation/section-nav';
+import ContactCta, {
+  type ContactFormLabels,
+} from '@/components/contact/contact-cta';
 import {
   EnvelopeSimple,
   GithubLogo,
@@ -62,8 +65,10 @@ export default async function Home({ params }: HomeProps) {
 
   const t = await getTranslations({ locale, namespace: 'home' });
   const nav = await getTranslations({ locale, namespace: 'navigation' });
+  const tRoot = await getTranslations({ locale });
   const isArabic = locale === 'ar';
   const stats = t.raw('stats') as Stat[];
+  const contactLabels = tRoot.raw('contactForm') as ContactFormLabels;
   const skillById = new Map(SKILLS.map((skill) => [skill.id, skill]));
 
   const sideNav: SectionNavItem[] = [
@@ -269,15 +274,11 @@ export default async function Home({ params }: HomeProps) {
           <p className="max-w-2xl text-base leading-8 text-muted-foreground">
             {t('contactBody')}
           </p>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex h-10 items-center gap-2 border border-primary bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            {t('contactCta')}
-            <span aria-hidden="true">-&gt;</span>
-          </a>
+          <ContactCta
+            triggerLabel={t('contactCta')}
+            labels={contactLabels}
+            locale={locale}
+          />
         </section>
       </div>
     </main>

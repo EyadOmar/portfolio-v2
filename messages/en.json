@@ -75,5 +75,64 @@
         "label": "core technologies"
       }
     ]
+  },
+  "contactForm": {
+    "open": "Open contact form",
+    "close": "Close",
+    "title": "initialize.contact",
+    "subtitle": "send a brief — replies on whatsapp within a day",
+    "headline": "let's build something real.",
+    "escapeHint": "press esc to dismiss",
+    "fields": {
+      "name": {
+        "step": "01",
+        "label": "Who are you?",
+        "placeholder": "your full name"
+      },
+      "contact": {
+        "step": "02",
+        "label": "How do I reach you?",
+        "placeholder": "email or phone — i'll detect it",
+        "hintEmail": "email detected",
+        "hintPhone": "phone detected",
+        "hintIdle": "either works"
+      },
+      "services": {
+        "step": "03",
+        "label": "What do you need?",
+        "hint": "select one or more"
+      }
+    },
+    "services": {
+      "fullProject": {
+        "label": "Full project",
+        "description": "design + frontend + backend, end-to-end"
+      },
+      "frontend": {
+        "label": "Frontend",
+        "description": "next.js, react, design systems, RTL"
+      },
+      "backend": {
+        "label": "Backend",
+        "description": "nestjs, postgres, apis, dashboards"
+      },
+      "hire": {
+        "label": "Hire me",
+        "description": "full-time role or long contract"
+      }
+    },
+    "submit": "send to whatsapp",
+    "sending": "opening whatsapp",
+    "errors": {
+      "name": "tell me what to call you.",
+      "contact": "drop an email or phone i can reach.",
+      "services": "pick at least one scope."
+    },
+    "message": {
+      "header": "Hi Eyad — new contact from eyadomar.com",
+      "name": "Name",
+      "contact": "Contact",
+      "services": "Interested in"
+    }
   }
 }
